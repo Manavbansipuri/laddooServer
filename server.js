@@ -11,9 +11,9 @@ const app = express();
 
 app.use(
   cors({
-    origin: ["https://storied-otter-59358c.netlify.app/", "http://localhost:3001"],
-    methods: "GET, POST, PUT, DELETE",
-    allowedHeaders: "Content-Type",
+    origin: "*",
+    methods: ["GET", "POST", "PUT", "DELETE"],
+    allowedHeaders: ["Content-Type", "Authorization"],
   })
 );
 
