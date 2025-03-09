@@ -3,6 +3,12 @@ import upload from "../middlewares/fileUploadMiddleware.js";
 import Song from "../model/model.js";
 
 const router = express.Router();
+// Welcome Route with H1
+router.get("/", (req, res) => {
+  res.send("<h1>Hello, welcome to LAddo admin!</h1>");
+});
+
+
 
 // Upload Route
 router.post("/upload", upload.fields([{ name: "image" }, { name: "songFile" }]), async (req, res) => {
